@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "../../_context/form-context-hook";
 import { getFormData } from "@/actions/get-formdata-by-id";
+import Image from "next/image";
 
 
 export function Circular() {
@@ -60,7 +61,7 @@ export function Circular() {
             <div className="h-3/4">
               <div className="h-[15%]  flex justify-center ">
                 <div className="w-[80%]  border-b border-gray-500 flex items-center">
-                  <img
+                  <Image
                     src="/Header.png"
                     alt="College Header"
                     className="dark:invert w-full h-full"
@@ -81,7 +82,7 @@ export function Circular() {
                 <p className="indent-8">
                   All the teching staff of {formData?.departmentName} are hereby informed that the
                   Department of {formData?.departmentName} is going to
-                  organise a {formData?.title} programe on " {context?.subject} " From {formData?.startDate} to {formData?.endDate} . Hence, all
+                  organise a {formData?.title} programe on &quot; {context?.subject} &quot; From {formData?.startDate} to {formData?.endDate} . Hence, all
                   the Facuty are advised to attend the programme and utilize
                   this opportunity. For further information you can contact
                   event coordinator {context?.coordinator === "" ? "coordinator" : context?.coordinator } , Associate Professor,

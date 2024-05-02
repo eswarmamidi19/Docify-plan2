@@ -17,6 +17,8 @@ import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useForm } from "../../_context/form-context-hook";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import Image from "next/image";
+
 const customFont = localFont({
   src: "../../../../../../public/fonts/font.woff2",
 });
@@ -31,7 +33,7 @@ interface FileState {
 }
 
 
-export default function certificatePage() {
+export default function CertificatePage() {
   
   const handleDownload = (e : FormEvent) => {
     e.preventDefault();
@@ -75,7 +77,7 @@ export default function certificatePage() {
 
   useEffect(() => {
     getData();
-  }, [context?.eventId]);
+  }, [context?.eventId ,getData]);
 
   const [name, setName] = useState("");
   
@@ -217,7 +219,7 @@ export default function certificatePage() {
                 <div className="h-full w-full border-[20px] border-yellow-500 flex flex-col py-2 items-center" id="cert">
                   <div className="flex flex-col items-center gap-3">
                     <div>
-                      <img
+                      <Image
                         src="\aditya-logo.jpg"
                         alt="aditya-logo"
                         height={150}
@@ -236,7 +238,7 @@ export default function certificatePage() {
                         style={{ fontFamily: "Arial" }}
                       >
                         Approved By AICTE. Affiliated to JNTUK. Accredited by
-                        NAAC with 'A++ Grade'
+                        NAAC with &apos; A++ Grade &apos;
                       </p>
                       <p
                         className="text-center text-sm font-bold  font-sans"
@@ -276,9 +278,9 @@ export default function certificatePage() {
 
                   <div className="w-[95%] py-10 flex justify-center items-center gap-9">
                     <div className="">
-                      <img
+                      <Image
                         className=""
-                        src={coordinator?.preview}
+                        src={coordinator?.preview!}
                         alt=""
                         height={150}
                         width={150}
@@ -290,9 +292,9 @@ export default function certificatePage() {
                     </div>
 
                     <div className="">
-                      <img
+                      <Image
                         className=""
-                        src={coordinator?.preview}
+                        src={coordinator?.preview!}
                         alt=""
                         height={150}
                         width={150}
@@ -304,9 +306,9 @@ export default function certificatePage() {
                     </div>
 
                     <div className="">
-                      <img
+                      <Image
                         className=""
-                        src={coconvenor?.preview}
+                        src={coconvenor?.preview!}
                         alt=""
                         height={150}
                         width={150}
@@ -318,9 +320,9 @@ export default function certificatePage() {
                     </div>
 
                     <div className="">
-                      <img
+                      <Image
                         className=""
-                        src={Prinicipal?.preview}
+                        src={Prinicipal?.preview!}
                         alt=""
                         height={150}
                         width={150}

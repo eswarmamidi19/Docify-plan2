@@ -17,6 +17,7 @@ import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useForm } from "../../_context/form-context-hook";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import Image from "next/image";
 
 const customFont = localFont({
   src: "../../../../../../public/fonts/font.woff2",
@@ -238,22 +239,22 @@ export default function certificatePage() {
             <div className='h-[70%] w-[30%] bg-orange-500 flex justify-center  rounded-tl-xl rounded-br-xl'>
                 <h1 className='font-bold text-2xl text-white font-sans' style={{ fontFamily: 'Arial' }}>Hearty Welcome</h1>
             </div>
-            <img src="\aditya-logo.jpg" alt="aditya-logo" height={120} width={120}/>
+            <Image src="\aditya-logo.jpg" alt="aditya-logo" height={120} width={120}/>
         </div>
         <div className='h-[50%] w-full flex justify-center items-center gap-96 py-6'>
           <div className="flex justify-center items-center gap-8">
             <div className='flex flex-col items-center'>
-                <img className='rounded-tl-xl rounded-br-xl w-[150px] h-[150px]' src={rp1?.preview || ""}  alt=''  />
+                <Image className='rounded-tl-xl rounded-br-xl w-[150px] h-[150px]' src={rp1?.preview || ""}  alt=''  />
                 <span className='text-bold text-2xl font-sans text-red-600'>{rp1N}</span>
                 <span className='text-bold text-lg font-sans'>{rp1D}</span>
             </div>            
             <div className='flex flex-col items-center'>
-                <img className='rounded-tl-xl rounded-br-xl  w-[150px] h-[150px]' src={rp2?.preview || ""} alt=''  />
+                <Image className='rounded-tl-xl rounded-br-xl  w-[150px] h-[150px]' src={rp2?.preview || ""} alt=''  />
                 <span className='text-bold text-2xl font-sans'>{rp2N}</span>
                 <span className='text-bold text-lg font-sans'>{rp2D}</span>
             </div>     
             <div className='flex flex-col items-center '>
-                <img className='rounded-tl-xl rounded-br-xl  w-[150px] h-[150px]' src={rp3?.preview|| ""} alt='' />
+                <Image className='rounded-tl-xl rounded-br-xl  w-[150px] h-[150px]' src={rp3?.preview|| ""} alt='' />
                 <span className='text-bold text-2xl font-sans'>{rp3N}</span>
                 <span className='text-bold text-lg font-sans'>{rp3D}</span>
             </div>        

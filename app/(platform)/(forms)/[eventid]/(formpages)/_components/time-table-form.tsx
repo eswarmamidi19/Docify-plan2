@@ -59,7 +59,7 @@ export function TimeTableForm() {
 
   useEffect(() => {
     getData();
-  }, [context?.eventId]);
+  }, [context?.eventId ,getData]);
 
   const handleDownload = (e : FormEvent) => {
     e.preventDefault();

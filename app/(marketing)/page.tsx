@@ -48,7 +48,7 @@ export default function RootPage() {
       >
         Streamline your event reporting process with our intuitive and
         comprehensive tool. From conferences to workshops, galas to seminars,
-        we've got you covered. 
+        we &apos; ve got you covered. 
       </div>
 
       {/* Sign Up Button */}

@@ -3,6 +3,7 @@
 import { getFormData } from "@/actions/get-formdata-by-id";
 import { useEffect, useState } from "react";
 import { useForm } from "../../_context/form-context-hook";
+import Image from "next/image";
 
 export default function GuestFeedBack(){
     const context = useForm();
@@ -40,7 +41,7 @@ export default function GuestFeedBack(){
   
     useEffect(() => {
       getData();
-    }, [context?.eventId]);
+    }, [context?.eventId,getData]);
     
   
     let currentDate = `${day}-${month}-${year}`;
@@ -53,7 +54,7 @@ export default function GuestFeedBack(){
            <div className="h-3/4">
              <div className="h-[15%]  flex justify-center ">
                <div className="w-[80%]  border-b border-gray-500 flex items-center">
-                 <img
+                 <Image
                    src="/Header.png"
                    alt="College Header"
                    className="dark:invert w-full h-full"

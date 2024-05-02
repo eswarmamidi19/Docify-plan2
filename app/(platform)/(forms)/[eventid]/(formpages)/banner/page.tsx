@@ -14,6 +14,7 @@ import { FormEvent, useEffect, useState } from "react";
 import { getFormData } from "@/actions/get-formdata-by-id";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import Image from "next/image";
 export default function Banner(){
 
      
@@ -44,7 +45,7 @@ export default function Banner(){
 
   useEffect(() => {
      getData();
-   }, [context?.eventId]);
+   }, [context?.eventId,getData]);
 
    const handleDownload = (e : FormEvent) => {
     e.preventDefault();
@@ -77,7 +78,7 @@ export default function Banner(){
               <DialogDescription>
               <div className='h-[98%] w-[95%] border-t-[18px] border-orange-500 flex flex-col py-2 justify-between items-center' id="banner">
         <div className='h-[18%] w-full flex flex-col justify-between items-center'>
-            <img src="\aditya-logo.jpg" alt="aditya-logo" height={120} width={120}/>
+            <Image src="\aditya-logo.jpg" alt="aditya-logo" height={120} width={120}/>
         </div>
         <div className='h-[50%] w-full flex justify-center items-center gap-11 py-6 m-5 text-blue-600 text-2xl font-bold'>
            <h1>  {formData?.title}</h1>

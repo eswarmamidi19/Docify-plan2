@@ -4,6 +4,7 @@
 import {useEffect, useState } from "react";
 import { useForm } from "../../_context/form-context-hook";
 import { getFormData } from "@/actions/get-formdata-by-id";
+import Image from "next/image";
 
 
 export function Budgetletter() {
@@ -56,7 +57,7 @@ export function Budgetletter() {
             <div className="h-3/4">
               <div className="h-[15%]  flex justify-center ">
                 <div className="w-[80%]  border-b border-gray-500 flex items-center">
-                  <img
+                  <Image
                     src="/Header.png"
                     alt="College Header"
                     className="dark:invert w-full h-full"
@@ -65,7 +66,7 @@ export function Budgetletter() {
               </div>
               <div className="h-[85%]  flex flex-col items-center gap-5 ">
                 <h1 className="text-xl tracking-wide font-bold">
-                  {" "}
+                
                   Department of {formData?.departmentName}
                 </h1>
                 <div className="w-full text-end p-3">Date : {currentDate}</div>
@@ -91,7 +92,7 @@ export function Budgetletter() {
               <p className="indent-8">
                   All the teching staff of {formData?.departmentName} are hereby informed that the
                   Department of {formData?.departmentName} is going to
-                  organise a {formData?.title} programe on " {context?.subject} " From {formData?.startDate} to {formData?.endDate} . Hence, all
+                  organise a {formData?.title} programe on &quot; {context?.subject} &quot; From {formData?.startDate} to {formData?.endDate} . Hence, all
                   the Facuty are advised to attend the programme and utilize
                   this opportunity. For further information you can contact
                   event coordinator {context?.coordinator === "" ? "coordinator" : context?.coordinator } , Associate Professor,
